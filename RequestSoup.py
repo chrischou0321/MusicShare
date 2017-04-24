@@ -1,0 +1,7 @@
+import requests
+from bs4 import BeautifulSoup
+
+request = requests.get("https://www.youtube.com/results?search_query=pitbull")
+requestContent = request.content
+requestSoup = BeautifulSoup(requestContent, "html.parser")
+print(requestSoup)
